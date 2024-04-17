@@ -3,6 +3,7 @@ package com.herokuapp.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 
 public class CheckboxesPage extends BasePage{
     public CheckboxesPage(WebDriver driver) {
@@ -24,5 +25,10 @@ public class CheckboxesPage extends BasePage{
 
         }
         return this;
+    }
+    public void checkingCheckboxChanges() {
+        CheckboxesPage checkboxesPage = new CheckboxesPage(driver);
+        Assert.assertTrue(checkboxesPage.firstCheckbox.isSelected(), "Checkbox 1 should be selected");
+        Assert.assertFalse(checkboxesPage.secondCheckbox.isSelected(), "Checkbox 2 should not be selected");
     }
 }
