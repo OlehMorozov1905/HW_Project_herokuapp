@@ -21,4 +21,24 @@ public class HomePage extends BasePage{
         click(windowsPage);
         return new BrowserWindowsPage(driver);
     }
+    @FindBy(xpath = "//a[contains(text(),'Checkboxes')]")
+    WebElement checkboxesPage;
+    public CheckboxesPage getCheckboxesPage() {
+        click(checkboxesPage);
+        return new CheckboxesPage(driver);
+    }
+
+    @FindBy(css = "a[href='/dropdown']")
+    WebElement dropdownListPage;
+    public DropdownListPage getDropdownListPage() {
+        click(dropdownListPage);
+        return new DropdownListPage(driver);
+    }
+
+    @FindBy(css = "a[href='/upload']")
+    WebElement fileUploadPage;
+    public FileUploadPage getFileUploadPage() {
+        click(fileUploadPage);
+        return new FileUploadPage(driver);
+    }
 }
