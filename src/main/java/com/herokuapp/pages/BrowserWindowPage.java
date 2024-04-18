@@ -8,16 +8,15 @@ import org.testng.Assert;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BrowserWindowsPage extends BasePage{
-    public BrowserWindowsPage(WebDriver driver) {
+public class BrowserWindowPage extends BasePage{
+    public BrowserWindowPage(WebDriver driver) {
         super(driver);
     }
 
     @FindBy(xpath = "//a[contains(text(),'Click Here')]")
     WebElement clickHereButton;
-    public BrowserWindowsPage switchToNextWindow(int index) {
+    public BrowserWindowPage switchToNextWindow(int index) {
         click(clickHereButton);
-
         List<String> windows = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(windows.get(index));
         return this;

@@ -1,0 +1,8 @@
+com\herokuapp\tests\DropdownListTest.class
+com\herokuapp\tests\AlertsTests.class
+com\herokuapp\tests\BrokenImagesTest.class
+com\herokuapp\tests\DragAndDropTests.class
+com\herokuapp\tests\CheckboxesTest.class
+com\herokuapp\tests\NewWindowsTests.class
+com\herokuapp\tests\TestBase.class
+com\herokuapp\tests\FileUploadTest.class

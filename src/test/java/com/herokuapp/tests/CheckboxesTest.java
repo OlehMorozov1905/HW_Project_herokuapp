@@ -2,7 +2,6 @@ package com.herokuapp.tests;
 
 import com.herokuapp.pages.CheckboxesPage;
 import com.herokuapp.pages.HomePage;
-import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 

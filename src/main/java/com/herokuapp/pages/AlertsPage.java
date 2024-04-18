@@ -1,6 +1,7 @@
 package com.herokuapp.pages;
 
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -15,12 +16,9 @@ public class AlertsPage extends BasePage{
     WebElement alertSimpleButton;
     public AlertsPage alertSimple() {
         click(alertSimpleButton);
-
         driver.switchTo().alert().accept();
-
         return this;
     }
-
     @FindBy(xpath = "//p[text()='You successfully clicked an alert']")
     WebElement alertSimpleResult;
     public AlertsPage verifyResultAlertSimple() {
